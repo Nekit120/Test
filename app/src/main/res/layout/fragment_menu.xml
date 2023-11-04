@@ -12,10 +12,19 @@
         app:elevation="0dp"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F5F4F4"
+            android:backgroundTint="#F5F4F4"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:menu="@menu/menu_toolbar"
+            app:title="Moscow" />
+
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/ToolBar"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             app:layout_scrollFlags="scroll"
             android:background="#FFFFFF"
             >
@@ -26,11 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
