@@ -1,6 +1,10 @@
 package com.example.mytestapp
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.Menu
+import android.view.View
+import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -16,9 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         val navView: BottomNavigationView = binding.navView
 
@@ -32,4 +37,9 @@ class MainActivity : AppCompatActivity() {
         )
         navView.setupWithNavController(navController)
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_toolbar, menu)
+        return true
+    }
+
 }
